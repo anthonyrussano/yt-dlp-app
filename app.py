@@ -53,4 +53,4 @@ def download_video():
 if __name__ == "__main__":
     if not os.path.exists(download_folder):
         os.makedirs(download_folder)
-    app.run(host="0.0.0.0", debug=True, port=8920)
+    app.run(host="0.0.0.0", debug=True)
