@@ -1,0 +1,7 @@
+---
+version: "3.5"
+services:
+  yt-dlp-app:
+    ports:
+      - '5556:5000'
+    image: anthonyrussano/yt-dlp-app:latest
