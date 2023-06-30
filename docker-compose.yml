@@ -5,3 +5,12 @@ services:
     ports:
       - '5556:5000'
     image: anthonyrussano/yt-dlp-app:latest
+    volumes:
+      - yt-dlp-downloads:/app/downloads
+
+volumes:
+  yt-dlp-downloads:
+    driver_opts:
+      type: "nfs"
+      o: "addr=10.32.25.118,nolock,rw,soft,nfsvers=4"
+      device: ":/mnt/prox-pool/Coolnow/docker/yt-dlp-downloads"
